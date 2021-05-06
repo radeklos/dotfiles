@@ -8,3 +8,8 @@ Install script install the following packges:
 ```bash
 install.sh
 ```
+
+
+```bash
+git clone https://github.com/powerline/fonts.git --depth=1 
+```
