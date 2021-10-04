@@ -16,7 +16,7 @@ set -g status-bg "colour238"
 setw -g window-status-separator ""
 setw -g clock-mode-colour colour238
 
-set -g status-left "#[fg=colour0,bg=colour238] #[fg=colour238,bg=colour238] #(cd #{pane_current_path}; git rev-parse --abbrev-ref HEAD)"
+set -g status-left "#[fg=colour0,bg=colour238] #S #[fg=colour238,bg=colour238]"
 
 set -g status-right "#{prefix_highlight} #[fg=colour8,bg=colour238]#[fg=colour0,bg=colour8]  %a  %h %d  %H:%M #[fg=colour238,bg=colour8]#[fg=colour125,bg=colour238]#[fg=colour0,bg=colour125] #h #[fg=colour4,bg=colour125] "
 
