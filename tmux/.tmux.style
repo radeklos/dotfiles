@@ -8,26 +8,37 @@ set -g @prefix_highlight_bg 'green'
 set -g status "on"
 set -g status-justify "left"
 
+# set -g status-right-attr "none"
+
 set -g status-fg "colour7"
 set -g status-bg "colour238"
 
 setw -g window-status-separator ""
 setw -g clock-mode-colour colour238
 
-set -g status-left "#[fg=colour0,bg=colour238] #S #[fg=colour238,bg=colour238]"
+set -g status-left "#[fg=colour0,bg=colour238] #[fg=colour238,bg=colour238] #(cd #{pane_current_path}; git rev-parse --abbrev-ref HEAD)"
 
 set -g status-right "#{prefix_highlight} #[fg=colour8,bg=colour238]#[fg=colour0,bg=colour8]  %a  %h %d  %H:%M #[fg=colour238,bg=colour8]#[fg=colour125,bg=colour238]#[fg=colour0,bg=colour125] #h #[fg=colour4,bg=colour125] "
+
+# set -g status-right '#(cd #{pane_current_path}; git rev-parse --abbrev-ref HEAD)'
+# set -g status-right "#(battery Discharging) | #[fg=cyan]%d %b %R"
 
 setw -g window-status-format "#[fg=colour238,bg=colour8]#[fg=colour0,bg=colour8] #I #[fg=colour0,bg=colour8] #W #[fg=colour8,bg=colour238]"
 
 setw -g window-status-current-format "#[fg=colour238,bg=colour10]#[fg=colour0,bg=colour10] #I #[fg=colour0,bg=colour10] #W #[fg=colour10,bg=colour238]"
 
+
 set -g message-style bg="colour10",fg="colour238",none
 set -g window-status-style bg="colour11",fg="colour238",none
 set -g window-status-activity-style bg="colour12",fg="colour238",none
 
+# setw -g window-status-fg "colour238"
+# setw -g window-status-bg "colour11"
+# setw -g window-status-attr "none"
+# setw -g window-status-activity-fg "colour238"
+# setw -g window-status-activity-bg "colour12"
+# setw -g window-status-activity-attr "none"
+
+
 set -g status-left-length "100"
 set -g status-right-length "100"
-
-set -g pane-active-border-style bg=green,fg=magenta
-set -g pane-border-style fg=green

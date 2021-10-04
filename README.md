@@ -1,3 +1,3 @@
 # My dotfiles
 
-Install script install the following packges:
+- http://cocopon.github.io/iceberg.vim/
